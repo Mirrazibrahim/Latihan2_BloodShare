@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlmostThere"
+    android:background="@color/blue">
+
+    <TextView
+        android:id="@+id/almst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Almost There"
+        android:textColor="@color/white"
+        android:layout_marginTop="200dp"
+        android:textSize="36sp"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/thnk"
+        android:layout_below="@id/almst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thank You for registering with us. One More\nyou need to check your email\nto active your account"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/bt_verify"
+        android:layout_below="@id/thnk"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/button_bg_transparent"
+        android:text="VERIFY"
+        android:textColor="@color/white"
+        android:onClick="toverify"/>
+
+</RelativeLayout>

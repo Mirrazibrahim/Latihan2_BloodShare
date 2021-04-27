@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+  <include
+      layout="@layout/toolbar"
+      android:id="@+id/toolbar"/>
+  <EditText
+      android:id="@+id/username"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/toolbar"
+      android:layout_marginTop="20dp"
+      android:layout_centerHorizontal="true"
+      android:ems="17"
+      android:inputType="textPersonName"
+      android:hint="Username"
+      android:textColorHint="@color/grey"
+      android:textColor="@color/grey"
+      android:textSize="18sp"
+      android:backgroundTint="@color/grey"/>
+
+  <EditText
+      android:id="@+id/email"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/username"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="10dp"
+      android:ems="17"
+      android:inputType="textEmailAddress"
+      android:hint="Email"
+      android:textColorHint="@color/grey"
+      android:textColor="@color/grey"
+      android:textSize="18sp"
+      android:backgroundTint="@color/grey"/>
+
+  <EditText
+      android:id="@+id/phone"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/email"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="10dp"
+      android:ems="17"
+      android:inputType="phone"
+      android:hint="Phone Number"
+      android:textColorHint="@color/grey"
+      android:textColor="@color/grey"
+      android:textSize="18sp"
+      android:backgroundTint="@color/grey"/>
+
+  <RadioGroup
+      android:id="@+id/gender"
+      android:layout_width="match_parent"
+      android:layout_below="@id/phone"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:gravity="center"
+      android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/male"
+        android:buttonTint="@color/blue"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:checked="true"
+        android:onClick="onRadioButtonClicked"
+        android:layout_marginStart="40dp"
+        android:textSize="18sp"
+        android:textColor="@color/grey"
+        android:text="Male" />
+
+    <RadioButton
+        android:id="@+id/female"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_weight="1"
+        android:buttonTint="@color/blue"
+        android:onClick="onRadioButtonClicked"
+        android:text="Female"
+        android:textSize="18sp"
+        android:textColor="@color/grey" />
+    </RadioGroup>
+
+    <Spinner
+        android:layout_below="@id/gender"
+        android:id="@+id/bloodtype"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="25dp"
+        android:textColor="@color/grey"
+        android:textSize="18sp"
+        android:entries="@array/bloodtype"/>
+
+    <Spinner
+      android:id="@+id/reshus"
+      android:layout_width="180dp"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/gender"
+      android:layout_alignParentEnd="true"
+      android:textAlignment="textEnd"
+      android:layout_marginTop="10dp"
+      android:layout_marginEnd="30dp"
+      android:layout_toRightOf="@id/bloodtype"
+      android:entries="@array/reshus"
+      android:textColor="@color/grey"
+      android:textSize="18sp" />
+
+     <EditText
+      android:id="@+id/password"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/bloodtype"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="10dp"
+      android:ems="17"
+      android:inputType="textPassword"
+      android:hint="Password"
+      android:textColorHint="@color/grey"
+      android:textColor="@color/grey"
+      android:textSize="18sp"
+      android:backgroundTint="@color/grey"/>
+
+     <EditText
+      android:id="@+id/rtpassword"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/password"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="10dp"
+      android:ems="17"
+      android:inputType="textPassword"
+      android:hint="Retype Password"
+      android:textColorHint="@color/grey"
+      android:textColor="@color/grey"
+      android:textSize="18sp"
+      android:backgroundTint="@color/grey"/>
+
+  <RadioGroup
+      android:id="@+id/ket"
+      android:layout_width="match_parent"
+      android:layout_below="@id/rtpassword"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:gravity="center"
+      android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/personal"
+        android:buttonTint="@color/blue"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:checked="true"
+        android:onClick="onRadioButtonClicked2"
+        android:layout_marginStart="40dp"
+        android:textSize="18sp"
+        android:textColor="@color/grey"
+        android:text="Personal" />
+
+    <RadioButton
+        android:id="@+id/organization"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_weight="1"
+        android:buttonTint="@color/blue"
+        android:onClick="onRadioButtonClicked2"
+        android:text="Organization"
+        android:textSize="18sp"
+        android:textColor="@color/grey" />
+     </RadioGroup>
+
+    <Spinner
+      android:id="@+id/job"
+      android:layout_width="360dp"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/ket"
+      android:layout_marginTop="10dp"
+      android:layout_centerHorizontal="true"
+      android:entries="@array/job"
+      android:textColor="@color/grey"
+      android:textSize="18sp" />
+
+    <EditText
+      android:id="@+id/addres"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/job"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="10dp"
+      android:ems="17"
+      android:inputType="text"
+      android:hint="Home Address"
+      android:textColorHint="@color/grey"
+      android:textColor="@color/grey"
+      android:textSize="18sp"
+      android:backgroundTint="@color/grey"/>
+
+    <EditText
+      android:id="@+id/location"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/addres"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="10dp"
+      android:ems="17"
+      android:inputType="text"
+      android:hint="Default Location"
+      android:textColorHint="@color/grey"
+      android:textColor="@color/grey"
+      android:textSize="18sp"
+      android:drawableEnd="@drawable/ic_baseline_location_on_24"
+      android:backgroundTint="@color/grey"/>
+
+   <CheckBox
+      android:id="@+id/checkBox"
+      android:layout_below="@id/location"
+      android:layout_width="360dp"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:text="Agree with Terms and Conditions"
+      android:textColor="@color/grey"/>
+
+   <Button
+      android:id="@+id/bt_register"
+      android:layout_below="@id/checkBox"
+      android:layout_width="350dp"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="30dp"
+      android:background="@drawable/button_bg_transparent_blue"
+      android:text="REGISTER"
+      android:textColor="@color/blue"
+       android:onClick="toalmost"/>
+
+
+</RelativeLayout>
